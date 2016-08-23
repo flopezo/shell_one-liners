@@ -9,4 +9,5 @@ Single lines of bash commands
 Read lines, search for each line string, and find matching files with .ab1 extension
 
     while read voucher; do find . -type f -name "*.ab1" -exec grep -l "$voucher" /dev/null '{}' \+; done < ../voucher_id_list.txt
+    while read line; do grep -l -r $line .; done < ../voucher_id_list.txt
   
