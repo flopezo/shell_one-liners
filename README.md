@@ -6,7 +6,7 @@ Single lines of bash commands
 
 - [find & grep](#find--grep)
 
-Read lines, search for each line string, and find matching files with .ab1 extension
+Read lines, search for string in each line, and find matching files with '.ab1' extension
 
     while read line; do find . -type f -name "*.ab1" -exec grep -l "$line" /dev/null '{}' \+; done < ../voucher_id_list.txt
     while read line; do grep -l -r "$line" .; done < ../voucher_id_list.txt
@@ -14,5 +14,6 @@ Read lines, search for each line string, and find matching files with .ab1 exten
     
 Read list and move files  
 
-    cat list_of_files.txt | xargs mv -t /destination_folder/
+    while IFS= read -r file; do mv "$file" /destination_folder/; done < list.txt
+    for i in $(cat list.txt); do mv "$i" /destination_folder/; done
   
