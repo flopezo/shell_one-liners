@@ -1,4 +1,4 @@
-# shell_one_liners
+# shell_one-liners
 
 Single lines of bash commands 
 
