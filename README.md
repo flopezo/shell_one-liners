@@ -16,4 +16,13 @@ Read list and move files
 
     while IFS= read -r file; do mv "$file" /destination_folder/; done < list.txt
     for i in $(cat list.txt); do mv "$i" /destination_folder/; done
+    
+Compare files line by line 
+
+    diff file1 file 2
+
+Output:
+%<     lines from FILE1
+%>     lines from FILE2
+%=     lines common to FILE1 and FILE2
   
