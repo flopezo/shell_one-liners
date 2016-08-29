@@ -20,9 +20,5 @@ Read list and move files
 Compare files line by line 
 
     diff file1 file 2
-
-Output:
-%<     lines from FILE1
-%>     lines from FILE2
-%=     lines common to FILE1 and FILE2
+    # Output: %< lines from file1, %> lines from file2, %= lines common to file1 and file2
   
